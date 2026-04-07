@@ -1,1 +1,2 @@
-web: vendor/bin/heroku-php-apache2 public/
+web: gunicorn config.wsgi --log-file -
+release: php artisan migrate --force
